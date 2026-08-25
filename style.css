@@ -9,20 +9,19 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'Courier New', monospace;
 
   /* Dark theme (default / hacker) */
-  --bg: #0a0f0c;
-  --bg-alt: #0e1512;
-  --surface: #101a15;
-  --surface-2: #0c1310;
-  --border: #1e332a;
-  --text: #d9ffe9;
-  --text-dim: #7fa993;
-  --muted: #5f8272;
+  --bg: #0a0a0a;
+  --bg-alt: #101010;
+  --surface: #141414;
+  --surface-2: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #f2f2f2;
+  --text-dim: #a3a3a3;
+  --muted: #737373;
   --accent: #39ff14;
   --accent-2: #00e5ff;
   --accent-contrast: #04140a;
   --shadow: 0 10px 30px -12px rgba(57, 255, 20, .18);
   --scanline-opacity: .05;
-  --matrix-opacity: .55;
 }
 
 :root[data-theme="light"] {
@@ -39,7 +38,6 @@
   --accent-contrast: #ffffff;
   --shadow: 0 10px 30px -14px rgba(10, 143, 79, .22);
   --scanline-opacity: 0;
-  --matrix-opacity: 0;
 }
 
 html { scroll-behavior: smooth; }
@@ -84,17 +82,6 @@ p { margin: 0 0 1em; color: var(--text-dim); }
 .muted { color: var(--muted); }
 
 /* -------------------- background fx -------------------- */
-
-#matrix-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-  opacity: var(--matrix-opacity);
-  transition: opacity .4s ease;
-  pointer-events: none;
-}
 
 .scanlines {
   position: fixed;
