@@ -174,18 +174,32 @@
   <!-- PORTFOLIO -->
   <section class="section" id="portfolio">
     <div class="container">
-      <div class="terminal-window reveal">
-        <div class="terminal-window__bar">
-          <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
-          <span class="terminal-window__title">yamulla@dev:~$ ./portfolio.sh</span>
-        </div>
-        <div class="terminal-window__body terminal-window__body--center">
-          <p class="loading-line">
-            <span class="prompt">&gt;</span> собираю кейсы<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>
-          </p>
-          <p class="muted">Портфолио скоро появится здесь. А пока — примеры можно посмотреть в Telegram.</p>
-          <a href="https://t.me/yamulla" target="_blank" rel="noopener" class="btn btn--ghost">Смотреть примеры →</a>
-        </div>
+      <p class="mono-tag reveal">$ ls ./portfolio</p>
+      <div class="portfolio-grid">
+        <article class="service-card portfolio-card reveal">
+          <span class="service-card__tag">01</span>
+          <h3>WEEKK — трекер дисциплины</h3>
+          <p>Telegram Mini App для трекинга учёбы и привычек: разделы, календарь
+            активности, история отчётов. Данные в Firebase, у каждого пользователя — свои.</p>
+          <ul class="tags portfolio-card__tags">
+            <li class="tag">Telegram Mini Apps</li>
+            <li class="tag">Firebase</li>
+            <li class="tag">JavaScript</li>
+          </ul>
+          <a href="https://t.me/weekktracker_bot" target="_blank" rel="noopener" class="portfolio-card__link">Открыть в Telegram →</a>
+        </article>
+
+        <article class="service-card portfolio-card reveal">
+          <span class="service-card__tag">02</span>
+          <h3>Калькулятор процентной разницы</h3>
+          <p>Лёгкий Telegram Mini App: считает процентную разницу между двумя
+            числами, свайп значений местами, тема подстраивается под Telegram.</p>
+          <ul class="tags portfolio-card__tags">
+            <li class="tag">Telegram Mini Apps</li>
+            <li class="tag">JavaScript</li>
+          </ul>
+          <a href="https://tg-calc-gilt.vercel.app" target="_blank" rel="noopener" class="portfolio-card__link">Открыть демо →</a>
+        </article>
       </div>
     </div>
   </section>

@@ -395,7 +395,8 @@ p { margin: 0 0 1em; color: var(--text-dim); }
 
 /* -------------------- services -------------------- */
 
-.services-grid {
+.services-grid,
+.portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
@@ -428,6 +429,23 @@ p { margin: 0 0 1em; color: var(--text-dim); }
 
 .service-card h3 { font-size: 1.05rem; }
 .service-card p { font-size: .9rem; margin: 0; }
+
+.portfolio-card__tags {
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+
+.portfolio-card__tags .tag { font-size: .72rem; padding: 4px 8px; }
+
+.portfolio-card__link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+  font-size: .88rem;
+  font-weight: 600;
+}
+
+.portfolio-card__link:hover { text-decoration: underline; }
 
 /* -------------------- contact -------------------- */
 
@@ -526,6 +544,7 @@ p { margin: 0 0 1em; color: var(--text-dim); }
   .burger { display: none; }
 
   .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(4, 1fr); }
 
   .footer__inner { flex-direction: row; justify-content: space-between; }
