@@ -213,3 +213,34 @@ a{color:inherit;text-decoration:none}
   .flow{grid-template-columns:repeat(5,1fr);gap:12px}.flow li{padding:44px 16px 16px}.flow li::before{top:16px}
   .split{grid-template-columns:1.25fr 1fr;gap:44px;align-items:start}
 }
+
+/* главный кейс BB Shop */
+.hero__lead strong{color:#fff}
+.case--star{display:block;border-color:#333;background:linear-gradient(180deg,#0b0b0b,#050505)}
+.star__head{display:grid;gap:26px;padding:30px 22px 8px}
+.case--star h3{font-family:var(--head);font-weight:700;font-size:clamp(28px,4.4vw,42px);letter-spacing:-.035em;line-height:1.05;margin:12px 0 10px}
+.try{display:flex;gap:18px;align-items:center;border:1px solid #2c2c2c;border-radius:20px;background:#0c0c0c;padding:18px}
+.try__qr{display:none;width:124px;height:124px;border-radius:12px;background:#fff;padding:6px;flex:none}
+.try__t{font-family:var(--head);font-weight:700;font-size:18px}.try__s{color:var(--mut);font-size:14px;line-height:1.5;margin:4px 0 14px}.try .btn{min-height:46px;padding:0 20px;font-size:15px}
+.stage{display:flex;justify-content:center;align-items:flex-end;gap:12px;padding:34px 14px 0;margin-top:22px;background:radial-gradient(520px 340px at 50% 55%,#202020,#050505);border-top:1px solid var(--line);overflow:hidden}
+.phone--l{width:46%;max-width:300px;margin:0;border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom:0;box-shadow:0 -10px 70px rgba(255,255,255,.07)}
+.phone--l img{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.phone--r{display:none}.phone--c{margin-bottom:0;transform:translateY(-22px)}
+.triad{display:grid;gap:12px;padding:26px 22px;border-top:1px solid var(--line)}
+.triad__i{border:1px solid var(--line);border-radius:18px;background:var(--s1);padding:22px}.triad__i p{color:#cfcfcf;font-size:16px;line-height:1.6;margin-top:10px}
+.triad__i--ok{border-color:#4a4a4a;background:linear-gradient(180deg,#151515,#080808)}.triad__i--ok .label{color:#fff}
+.triad__arrow{display:none;font-style:normal;font-family:var(--mono);color:var(--mut);align-self:center;font-size:22px}
+.checks{display:grid;gap:8px;margin-top:14px}.checks li{position:relative;padding-left:24px;color:#fff;font-size:15px;line-height:1.45;font-weight:500}.checks li::before{content:"✓";position:absolute;left:0;font-family:var(--mono);font-size:13px;top:1px}
+.case--star .case__more{border-top:1px solid var(--line)}
+.split--top{margin-bottom:34px}.flow--col{grid-template-columns:1fr!important}.flow--col li{padding:14px 16px 14px 48px!important}.flow--col li::before{top:14px!important}
+.final__sub--start strong{color:#fff;font-weight:600}.final__sub--start{font-size:clamp(17px,2.6vw,21px);max-width:32em}
+@media (min-width:900px){
+  .star__head{grid-template-columns:1.3fr 1fr;gap:44px;align-items:center;padding:48px 48px 12px}
+  .try{padding:22px}.try__qr{display:block}
+  .stage{gap:22px;padding:48px 24px 0}.phone--l{width:27%;max-width:310px}.phone--r{display:block}.phone--c{transform:translateY(-34px)}
+  .triad{grid-template-columns:1fr 24px 1fr 24px 1.15fr;gap:10px;padding:34px 48px;align-items:stretch}
+  .triad__arrow{display:flex;justify-content:center}
+  .triad__i{padding:26px}.triad__i p{font-size:16.5px}
+  .case--star .case__more{padding:40px 48px 48px}
+  .split--top{grid-template-columns:1fr 1fr}
+}

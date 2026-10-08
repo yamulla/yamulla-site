@@ -59,7 +59,7 @@
   <div class="container hero__in">
     <p class="badge reveal"><span aria-hidden="true">✦</span> Digital solutions for business</p>
     <h1 id="hero-title" class="hero__title reveal">Ваш бизнес не должен работать вручную.</h1>
-    <p class="hero__lead reveal">Сайты, Telegram Mini Apps, боты и <strong>автоматизация процессов</strong> — от идеи до запуска.</p>
+    <p class="hero__lead reveal">Находим, что в вашем бизнесе делается вручную, и превращаем это в <strong>рабочую систему</strong>: Telegram Mini App, бот, сайт или автоматизация — от идеи до запуска.</p>
     <div class="cta reveal">
       <a class="btn btn--primary" href="https://t.me/yamulla" target="_blank" rel="noopener">Обсудить задачу <span aria-hidden="true">→</span></a>
       <a class="btn btn--ghost" href="#work">Смотреть проекты</a>
@@ -142,38 +142,70 @@
     <p class="label reveal">Selected work</p>
     <h2 class="section__title reveal" id="work-title">Реальные проекты.</h2>
 
-    <article class="case case--feature reveal" aria-labelledby="case-bb">
-      <div class="case__body">
-        <p class="label">Кейс · автоматизация заявок</p>
-        <h3 id="case-bb">BB Shop — Telegram Mini App</h3>
-        <p class="case__lead">Клиентский интерфейс для взаимодействия с магазином спортивного питания прямо внутри Telegram.</p>
-        <ul class="tags"><li>Telegram</li><li>Mini App</li><li>Автоматизация заявок</li></ul>
-        <dl class="qa">
-          <div><dt>Проблема</dt><dd>Главная ценность магазина — живая консультация специалиста. Но покупателю трудно самому выбрать спортпит, а разговор с продавцом каждый раз приходится начинать с нуля: цель, тренировки, вес, что уже принимает.</dd></div>
-          <div><dt>Решение</dt><dd>Mini App внутри Telegram: короткая анкета из 5 вопросов, контакт и автоматическая отправка заявки продавцу. Приложение ничего не продаёт — оно ведёт человека к консультации.</dd></div>
-          <div><dt>Что сделал YAMULLA</dt><dd><ul class="dolist">
-            <li>Спроектировал путь клиента: от ссылки до готовой заявки.</li>
-            <li>Сделал Mini App и Telegram-бота: интерфейс, проверки данных, светлая и тёмная тема.</li>
-            <li>Настроил автоматическую отправку заявки продавцу и защиту от спама.</li>
-            <li>Запустил приложение и подготовил ссылку для Stories.</li>
-          </ul></dd></div>
-          <div><dt>Результат</dt><dd>Продавец получает готовую структурированную заявку вместо переписки с нуля, а клиент проходит весь путь внутри Telegram, ничего не устанавливая.</dd></div>
-        </dl>
-        <a class="link" href="https://t.me/bodybshop_bot/app" target="_blank" rel="noopener">Открыть проект <span aria-hidden="true">→</span></a>
+    <article class="case case--feature case--star reveal" aria-labelledby="case-bb">
+      <div class="star__head">
+        <div>
+          <p class="label">Главный кейс · автоматизация заявок</p>
+          <h3 id="case-bb">BB Shop — Telegram Mini App</h3>
+          <p class="case__lead">Клиентский интерфейс для взаимодействия с магазином спортивного питания прямо внутри Telegram.</p>
+          <ul class="tags"><li>Telegram</li><li>Mini App</li><li>Автоматизация заявок</li></ul>
+        </div>
+        <aside class="try" aria-label="Открыть приложение">
+          <img class="try__qr" src="assets/bb-qr.svg" width="124" height="124" alt="QR-код: открыть BB Shop в Telegram">
+          <div>
+            <p class="try__t">Это работающее приложение</p>
+            <p class="try__s">Откройте и пройдите анкету сами: кнопкой или камерой телефона на QR-код.</p>
+            <a class="btn btn--primary" href="https://t.me/bodybshop_bot/app" target="_blank" rel="noopener">Открыть BB Shop <span aria-hidden="true">→</span></a>
+          </div>
+        </aside>
       </div>
-      <div class="case__vis">
-        <figure class="phone"><img src="assets/bb-welcome.webp" width="780" height="1688" loading="lazy" decoding="async" alt="BB Shop: приветственный экран Mini App"></figure>
-        <figure class="phone phone--b"><img src="assets/bb-contact.webp" width="780" height="1688" loading="lazy" decoding="async" alt="BB Shop: экран выбора способа связи"></figure>
+
+      <div class="stage">
+        <figure class="phone phone--l"><img src="assets/bb-welcome.webp" width="780" height="1688" loading="lazy" decoding="async" alt="BB Shop: приветственный экран Mini App"></figure>
+        <figure class="phone phone--l phone--c"><img src="assets/bb-question.webp" width="780" height="1688" loading="lazy" decoding="async" alt="BB Shop: первый вопрос анкеты — какая у тебя цель"></figure>
+        <figure class="phone phone--l phone--r"><img src="assets/bb-contact.webp" width="780" height="1688" loading="lazy" decoding="async" alt="BB Shop: выбор способа связи"></figure>
       </div>
+
+      <div class="triad">
+        <section class="triad__i" aria-label="Проблема">
+          <h4 class="label">Проблема</h4>
+          <p>Главная ценность магазина — живая консультация специалиста. Но покупателю трудно самому выбрать спортпит, а разговор каждый раз приходится начинать с нуля: цель, тренировки, вес, что уже принимает.</p>
+        </section>
+        <i class="triad__arrow" aria-hidden="true">→</i>
+        <section class="triad__i" aria-label="Решение">
+          <h4 class="label">Решение</h4>
+          <p>Mini App внутри Telegram: анкета из 5 вопросов, контакт и автоматическая отправка заявки продавцу. Приложение ничего не продаёт — оно ведёт человека к консультации.</p>
+        </section>
+        <i class="triad__arrow" aria-hidden="true">→</i>
+        <section class="triad__i triad__i--ok" aria-label="Что получил бизнес">
+          <h4 class="label">Что получил бизнес</h4>
+          <p>Готовую заявку прямо в Telegram: цель, режим тренировок, что клиент уже принимает, что хочет подобрать, вес и контакт.</p>
+          <ul class="checks"><li>Заявка приходит сама, без ручного переноса</li><li>Все вводные собраны ещё до разговора</li><li>Консультация начинается с готовых данных</li></ul>
+        </section>
+      </div>
+
       <div class="case__more">
-        <h4 class="label">Как работает процесс</h4>
-        <ol class="flow">
-          <li><b>Клиент</b><span>открывает ссылку из Stories или бота</span></li>
-          <li><b>Mini App</b><span>5 вопросов: цель, тренировки, что принимает, что нужно подобрать, вес</span></li>
-          <li><b>Контакт</b><span>Telegram или телефон</span></li>
-          <li><b>Бот</b><span>отправляет заявку автоматически</span></li>
-          <li><b>Продавец</b><span>получает готовую заявку и связывается</span></li>
-        </ol>
+        <div class="split split--top">
+          <div>
+            <h4 class="label">Что сделал YAMULLA</h4>
+            <ul class="dolist">
+              <li>Спроектировал путь клиента: от ссылки до готовой заявки.</li>
+              <li>Сделал Mini App и Telegram-бота: интерфейс, проверки данных, светлая и тёмная тема.</li>
+              <li>Настроил автоматическую отправку заявки продавцу и защиту от спама.</li>
+              <li>Запустил приложение и подготовил ссылку для Stories.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="label">Как работает процесс</h4>
+            <ol class="flow flow--col">
+              <li><b>Клиент</b><span>открывает ссылку из Stories или бота</span></li>
+              <li><b>Mini App</b><span>5 вопросов: цель, тренировки, что принимает, что нужно подобрать, вес</span></li>
+              <li><b>Контакт</b><span>Telegram или телефон</span></li>
+              <li><b>Бот</b><span>отправляет заявку автоматически</span></li>
+              <li><b>Продавец</b><span>получает готовую заявку и связывается</span></li>
+            </ol>
+          </div>
+        </div>
         <div class="split">
           <div>
             <h4 class="label">Что реализовано</h4>
@@ -279,7 +311,7 @@
     <div class="final reveal">
       <p class="label">Contact</p>
       <h2 id="contact-title">Есть процесс, который хочется автоматизировать?</h2>
-      <p class="final__sub">Расскажите, как он работает сейчас. Вместе найдём, что можно упростить.</p>
+      <p class="final__sub final__sub--start">Не знаете, что именно автоматизировать? <strong>Просто расскажите, как сейчас работает процесс.</strong> Вместе найдём, что можно упростить.</p>
       <a class="btn btn--primary" href="https://t.me/yamulla" target="_blank" rel="noopener">Обсудить задачу <span aria-hidden="true">→</span></a>
       <p class="final__alt">Telegram <a href="https://t.me/yamulla" target="_blank" rel="noopener">@yamulla</a><!-- TODO: добавить Email, когда будет адрес --></p>
     </div>
