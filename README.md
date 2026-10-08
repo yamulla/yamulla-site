@@ -1,40 +1,39 @@
-# yamulla — AI • Automation • Web
+# YAMULLA — сайт (версия 0.1.2)
 
-Сайт персональной студии: AI-автоматизация, Telegram-боты, web-сервисы
-и цифровые инструменты для бизнеса. Тёмная terminal-тема с переключателем
-на светлую, адаптив от 320px до широких экранов.
+Сайт бренда YAMULLA: цифровые решения для бизнеса (Web · Telegram · Automation · AI).
+Тёмный минималистичный дизайн со световым лучом в hero. Чистые HTML / CSS / JS без сборки и зависимостей.
 
-## Структура страницы
-
-1. Hero — «Ваш бизнес не должен работать вручную» + живой automation flow
-2. «Знакомо?» — типичные ручные процессы
-3. Before → After — интерактивное сравнение процессов
-4. Что можно автоматизировать — 6 направлений
-5. «Не знаете, что нужно?» — описание задачи → Telegram
-6. Уровни решений — от простой автоматизации до продукта
-7. Кейсы — PROBLEM → SOLUTION → PURPOSE
-8. Процесс — timeline
-9. FAQ
-10. Финальный CTA
-
-## Стек
-
-Чистый HTML / CSS / JS, без сборки и зависимостей — деплоится как статический сайт.
-Шрифты: Inter и JetBrains Mono (Google Fonts). `og-image.png` — превью для соцсетей.
-
-## Запуск локально
-
-```bash
-npx serve .
+## Структура
+```
+index.html     разметка (семантика, SEO, Open Graph)
+style.css      стили, mobile-first
+script.js      меню, подсветка пунктов, scroll-reveal, анимации секций
+fonts/         Manrope, Inter, JetBrains Mono (woff2, latin + cyrillic) — свои, без Google Fonts
+assets/        скриншоты проектов (WebP)
+og-image.png   превью для соцсетей (1200×630)
+favicon.svg  robots.txt
 ```
 
-## Деплой на Vercel
+## Страница
+Hero → Problem → Before/After → Services → Selected work (BB Shop, WEEKK) → Process → Approach → FAQ → Contact.
 
-Репозиторий подключён к Vercel: каждый пуш в `master` автоматически выкатывается
-на production, остальные ветки получают preview-ссылки.
-
-Ручной деплой при необходимости:
-
+## Локальный запуск
 ```bash
-npx vercel --prod
+npx serve .        # или: python3 -m http.server 8080
 ```
+
+## Что заменить / дополнить (TODO)
+- **Email** — в блоке Contact (`index.html`, комментарий `TODO`) и в футере.
+- **YouTube** — ссылка в футере (комментарий `TODO`).
+- **Open Graph** — адреса прописаны для `https://yamulla-site.vercel.app`. Если домен изменится, обновить `og:url`, `og:image`, `twitter:image` и `canonical` в `index.html`.
+- **Скриншоты проектов** — `assets/*.webp`. Кадр WEEKK взят из промо-ролика, при желании заменить настоящим скриншотом.
+- Ссылки на проекты: BB Shop `https://t.me/bodybshop_bot/app`, WEEKK `https://t.me/weekktracker_bot`, калькулятор `https://tg-calc-gilt.vercel.app`.
+
+## Принципы контента
+Никаких выдуманных клиентов, отзывов, цифр и результатов. «4 направления / 5 шагов / 3 проекта» — факты о самом сайте.
+В кейсах — только реально реализованные функции.
+
+## Деплой
+Статический сайт: Vercel / Netlify / GitHub Pages. Root Directory — папка с `index.html`, Build Command не нужен.
+
+Предыдущая версия сайта сохранена в ветке `old-site`.

@@ -1,474 +1,262 @@
-<!DOCTYPE html>
-<html lang="ru" data-theme="dark">
+<!doctype html>
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yamulla — AI Automation &amp; Web Development</title>
-<meta name="description" content="AI-автоматизация, Telegram-боты, web-сервисы и цифровые решения для бизнеса.">
-<meta name="theme-color" content="#0a0a0a">
-<link rel="canonical" href="https://yamulla-site.vercel.app/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YAMULLA — цифровые решения для бизнеса: сайты, Telegram, автоматизация</title>
+<meta name="description" content="YAMULLA превращает ручные процессы в цифровые системы: сайты, Telegram Mini Apps, боты, автоматизация и AI-инструменты — от идеи до запуска.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="Yamulla">
-<meta property="og:title" content="Yamulla — AI Automation &amp; Web Development">
-<meta property="og:description" content="AI-автоматизация, Telegram-боты, web-сервисы и цифровые решения для бизнеса.">
+<meta property="og:site_name" content="YAMULLA">
+<meta property="og:title" content="YAMULLA — цифровые решения для бизнеса">
+<meta property="og:description" content="Сайты, Telegram Mini Apps, боты и автоматизация процессов — от идеи до запуска.">
 <meta property="og:url" content="https://yamulla-site.vercel.app/">
 <meta property="og:image" content="https://yamulla-site.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="YAMULLA — ваш бизнес не должен работать вручную">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yamulla — AI Automation &amp; Web Development">
-<meta name="twitter:description" content="AI-автоматизация, Telegram-боты, web-сервисы и цифровые решения для бизнеса.">
 <meta name="twitter:image" content="https://yamulla-site.vercel.app/og-image.png">
+<link rel="canonical" href="https://yamulla-site.vercel.app/">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/manrope-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
-<script>
-  // до отрисовки: включаем анимации появления и сохранённую тему (без «мигания»)
-  document.documentElement.classList.add('js');
-  try { if (localStorage.getItem('yamulla-theme') === 'light') document.documentElement.setAttribute('data-theme', 'light'); } catch (e) {}
-</script>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
-<a class="skip-link" href="#main">Перейти к содержимому</a>
-<div class="bg-grid" aria-hidden="true"></div>
-<div class="scanlines" aria-hidden="true"></div>
+<a class="skip" href="#main">Перейти к содержимому</a>
 
 <header class="header" id="top">
-  <div class="container header__inner">
-    <a href="#home" class="logo" aria-label="Yamulla — на главную">
-      <span class="logo__bracket">&gt;_</span> yamulla<span class="cursor" aria-hidden="true">_</span>
-    </a>
-
+  <div class="container header__in">
+    <a class="logo" href="#top" aria-label="YAMULLA — на главную">YAMULLA</a>
     <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="#home" class="nav__link" data-nav="home">home</a>
-      <a href="#solutions" class="nav__link" data-nav="solutions">solutions</a>
-      <a href="#cases" class="nav__link" data-nav="cases">cases</a>
-      <a href="#process" class="nav__link" data-nav="process">process</a>
-      <a href="#faq" class="nav__link" data-nav="faq">faq</a>
-      <a href="#contact" class="btn btn--primary nav__cta-mobile">Обсудить задачу →</a>
+      <a href="#work" data-nav="work">Проекты</a>
+      <a href="#services" data-nav="services">Услуги</a>
+      <a href="#process" data-nav="process">Процесс</a>
+      <a href="#faq" data-nav="faq">FAQ</a>
+      <a href="#contact" data-nav="contact">Контакты</a>
     </nav>
-
-    <div class="header__actions">
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему" aria-pressed="false">
-        <span class="theme-toggle__track">
-          <span class="theme-toggle__icon theme-toggle__icon--sun">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-          </span>
-          <span class="theme-toggle__thumb"></span>
-          <span class="theme-toggle__icon theme-toggle__icon--moon">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
-          </span>
-        </span>
-      </button>
-
-      <a href="#contact" class="btn btn--primary btn--sm header__cta">let's talk →</a>
-
-      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a class="btn btn--pill header__cta" href="https://t.me/yamulla" target="_blank" rel="noopener">Обсудить задачу</a>
+    <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- 1. HERO -->
-  <section class="hero" id="home" aria-labelledby="hero-title">
-    <div class="container hero__inner">
-      <div class="hero__copy">
-        <p class="mono-label reveal"><span class="pulse-dot" aria-hidden="true"></span>AI • AUTOMATION • WEB</p>
-        <h1 class="hero__title reveal" id="hero-title">Ваш бизнес не должен работать <span class="accent">вручную.</span></h1>
-        <p class="hero__lead reveal">
-          Создаю сайты, AI-инструменты и автоматизацию, которые убирают рутину,
-          ускоряют процессы и помогают бизнесу работать эффективнее.
-        </p>
-        <div class="hero__cta reveal">
-          <a href="#contact" class="btn btn--primary btn--lg">Обсудить задачу <span aria-hidden="true">→</span></a>
-          <a href="#solutions" class="btn btn--ghost btn--lg">Посмотреть решения</a>
-        </div>
-        <p class="hero__note reveal">Не просто создаю сайты. Автоматизирую процессы, которые каждый день отнимают время.</p>
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="beam" id="beam" aria-hidden="true">
+    <svg width="0" height="0" focusable="false"><filter id="smoke"><feTurbulence type="fractalNoise" baseFrequency=".008 .02" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="90"/></filter></svg>
+    <div class="beam__layer beam__layer--smoke"><div class="beam__drift"><div class="beam__smoke"></div></div></div>
+    <div class="beam__layer beam__layer--ray"><div class="beam__col"></div><div class="beam__core"></div></div>
+    <div class="beam__layer beam__layer--floor"><div class="beam__floor"></div></div>
+  </div>
+  <div class="container hero__in">
+    <p class="badge reveal"><span aria-hidden="true">✦</span> Digital solutions for business</p>
+    <h1 id="hero-title" class="hero__title reveal">Ваш бизнес не должен работать вручную.</h1>
+    <p class="hero__lead reveal">Сайты, Telegram Mini Apps, боты и <strong>автоматизация процессов</strong> — от идеи до запуска.</p>
+    <div class="cta reveal">
+      <a class="btn btn--primary" href="https://t.me/yamulla" target="_blank" rel="noopener">Обсудить задачу <span aria-hidden="true">→</span></a>
+      <a class="btn btn--ghost" href="#work">Смотреть проекты</a>
+    </div>
+    <dl class="stats reveal">
+      <div><dt>4</dt><dd>направления: Web, Telegram, Automation, AI</dd></div>
+      <div><dt>5</dt><dd>шагов от задачи до запуска</dd></div>
+      <div><dt>3</dt><dd>реальных проекта в портфолио</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 01 PROBLEM -->
+<section class="section" id="problem" aria-labelledby="problem-title">
+  <div class="container">
+    <p class="label reveal"><b>01</b> / Problem</p>
+    <h2 class="section__title reveal" id="problem-title">Большинство процессов не требуют ещё одного сотрудника.</h2>
+    <ul class="problems">
+      <li class="reveal"><span class="label">Заявки</span><p>Клиент написал <i aria-hidden="true">→</i> сообщение потерялось <i aria-hidden="true">→</i> <s>клиент ушёл</s></p></li>
+      <li class="reveal"><span class="label">Запись</span><p>Администратор вручную уточняет дату, время и услугу</p></li>
+      <li class="reveal"><span class="label">Заказы</span><p>Информация собирается по частям в переписке</p></li>
+      <li class="reveal"><span class="label">Рутина</span><p>Сотрудники каждый день повторяют одни и те же действия</p></li>
+    </ul>
+    <p class="statement reveal">Мы превращаем такие процессы в&nbsp;цифровые системы.</p>
+  </div>
+</section>
+
+<!-- 02 BEFORE / AFTER -->
+<section class="section" id="before-after" aria-labelledby="ba-title">
+  <div class="container">
+    <p class="label reveal"><b>02</b> / Before → After</p>
+    <h2 class="section__title reveal" id="ba-title">От ручной работы к системе.</h2>
+    <div class="ba" id="ba">
+      <article class="ba__col reveal" aria-labelledby="ba-before">
+        <h3 class="label" id="ba-before">Before</h3>
+        <ol class="steps">
+          <li>Клиент</li>
+          <li class="is-hand">Пишет сообщение</li>
+          <li class="is-hand">Ждёт ответа</li>
+          <li class="is-hand">Менеджер уточняет детали <small>вручную</small></li>
+          <li class="is-hand">Вручную заносит данные <small>вручную</small></li>
+          <li>Заказ / запись</li>
+        </ol>
+      </article>
+      <article class="ba__col ba__col--after reveal" aria-labelledby="ba-after">
+        <h3 class="label" id="ba-after">After</h3>
+        <ol class="steps">
+          <li>Клиент</li>
+          <li>Website / Telegram</li>
+          <li>Выбирает нужное</li>
+          <li class="is-auto">Данные собираются автоматически <small>auto</small></li>
+          <li>Бизнес получает готовую заявку</li>
+        </ol>
+      </article>
+    </div>
+    <ul class="ba__foot reveal">
+      <li>Меньше ручных действий</li>
+      <li>Меньше потерянных обращений</li>
+      <li>Понятнее процесс</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 03 SERVICES -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <p class="label reveal"><b>03</b> / Services</p>
+    <h2 class="section__title reveal" id="services-title">Четыре направления. Одна цель&nbsp;— меньше ручной работы.</h2>
+    <div class="services">
+      <article class="card reveal"><p class="card__n">01 / WEB</p><h3>Сайты и web-сервисы</h3><p>Лендинги, сайты компаний, каталоги и клиентские интерфейсы.</p></article>
+      <article class="card reveal" style="--d:.07s"><p class="card__n">02 / TELEGRAM</p><h3>Mini Apps и боты</h3><p>Заказы, записи, каталоги, личные кабинеты и другие сервисы прямо внутри Telegram.</p></article>
+      <article class="card reveal" style="--d:.14s"><p class="card__n">03 / AUTOMATION</p><h3>Автоматизация процессов</h3><p>Соединяем Telegram, сайты, CRM, таблицы и другие сервисы.</p></article>
+      <article class="card reveal" style="--d:.21s"><p class="card__n">04 / AI</p><h3>AI-инструменты</h3><p>AI-ассистенты, обработка запросов и интеллектуальная автоматизация.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 SELECTED WORK -->
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="container">
+    <p class="label reveal"><b>04</b> / Selected work</p>
+    <h2 class="section__title reveal" id="work-title">Реальные проекты.</h2>
+
+    <article class="case reveal" aria-labelledby="case-bb">
+      <div class="case__body">
+        <p class="label">Case 01</p>
+        <h3 id="case-bb">BB Shop — Telegram Mini App</h3>
+        <p class="case__lead">Клиентский интерфейс для взаимодействия с магазином прямо внутри Telegram.</p>
+        <ul class="tags"><li>Telegram</li><li>Mini App</li><li>Lead form</li></ul>
+        <dl class="qa">
+          <div><dt>Проблема</dt><dd>Покупателю трудно самому выбрать спортпит, а переписка с продавцом каждый раз начинается с одних и тех же вопросов.</dd></div>
+          <div><dt>Решение</dt><dd>Mini App с короткой анкетой: человек отвечает на 5 вопросов и оставляет контакт, заявка сразу уходит продавцу.</dd></div>
+          <div><dt>Что сделано</dt><dd>Пошаговая анкета, проверка данных, светлая и тёмная тема Telegram, отправка заявки продавцу в Telegram, защита от спама, бот с кнопкой запуска.</dd></div>
+          <div><dt>Результат</dt><dd>Продавец получает структурированную заявку вместо переписки с нуля.</dd></div>
+        </dl>
+        <a class="link" href="https://t.me/bodybshop_bot/app" target="_blank" rel="noopener">Открыть проект <span aria-hidden="true">→</span></a>
       </div>
-
-      <div class="hero__visual reveal" aria-label="Пример автоматизированного процесса обработки заявки">
-        <div class="panel flow-panel">
-          <div class="panel__bar">
-            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
-            <span class="panel__title">lead-flow.pipeline</span>
-            <span class="panel__badge">live demo</span>
-          </div>
-          <ol class="flow" id="heroFlow">
-            <li class="flow__node" tabindex="0" aria-describedby="flow-d1">
-              <span class="flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
-              <span class="flow__name">CLIENT</span>
-              <span class="flow__desc" id="flow-d1" role="tooltip">Клиент пишет в любое время — днём или ночью</span>
-            </li>
-            <li class="flow__node" tabindex="0" aria-describedby="flow-d2">
-              <span class="flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.9 4.6 18.9 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9L18 7.2c.4-.4-.1-.6-.6-.2L7.5 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.5c.9-.3 1.6.2 1.3 1.1Z"/></svg></span>
-              <span class="flow__name">TELEGRAM</span>
-              <span class="flow__desc" id="flow-d2" role="tooltip">Бот сразу принимает сообщение и ничего не теряет</span>
-            </li>
-            <li class="flow__node" tabindex="0" aria-describedby="flow-d3">
-              <span class="flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg></span>
-              <span class="flow__name">AI</span>
-              <span class="flow__desc" id="flow-d3" role="tooltip">Отвечает на частые вопросы и собирает данные заявки</span>
-            </li>
-            <li class="flow__node" tabindex="0" aria-describedby="flow-d4">
-              <span class="flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>
-              <span class="flow__name">CRM</span>
-              <span class="flow__desc" id="flow-d4" role="tooltip">Заявка создаётся сама — без переноса данных руками</span>
-            </li>
-            <li class="flow__node" tabindex="0" aria-describedby="flow-d5">
-              <span class="flow__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span>
-              <span class="flow__name">MANAGER</span>
-              <span class="flow__desc" id="flow-d5" role="tooltip">Менеджер получает готовую заявку и уведомление</span>
-            </li>
-          </ol>
-        </div>
-
-        <div class="panel terminal terminal--mini" aria-hidden="true">
-          <div class="terminal__line"><span class="t-prompt">&gt;</span> <span data-type="automation.start()"></span></div>
-          <div class="terminal__line"><span class="t-prompt">&gt;</span> <span data-type="process.optimized" class="t-ok"></span></div>
-          <div class="terminal__line"><span class="t-prompt">&gt;</span> <span data-type="manual_work = -73%"></span> <span class="t-comment" data-type="// demo, пример"></span><span class="cursor">_</span></div>
-        </div>
+      <div class="case__vis">
+        <figure class="phone"><img src="assets/bb-welcome.webp" width="780" height="1688" loading="lazy" decoding="async" alt="BB Shop: приветственный экран Mini App"></figure>
+        <figure class="phone phone--b"><img src="assets/bb-contact.webp" width="780" height="1688" loading="lazy" decoding="async" alt="BB Shop: экран выбора способа связи"></figure>
       </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- 2. ЗНАКОМО? -->
-  <section class="section" id="problems" aria-labelledby="problems-title">
-    <div class="container">
-      <p class="mono-tag reveal">$ ./familiar.sh</p>
-      <h2 class="section__title reveal" id="problems-title">Сколько времени ваш бизнес теряет на&nbsp;ручную работу?</h2>
-      <ul class="problems" role="list">
-        <li class="problem reveal"><span class="problem__n">01</span>Клиенты задают одни и те же вопросы каждый день.</li>
-        <li class="problem reveal"><span class="problem__n">02</span>Заявки приходят из разных каналов и теряются.</li>
-        <li class="problem reveal"><span class="problem__n">03</span>Сотрудники переносят данные вручную.</li>
-        <li class="problem reveal"><span class="problem__n">04</span>Информация хранится в Excel / Google Sheets.</li>
-        <li class="problem reveal"><span class="problem__n">05</span>Менеджеры делают одну и ту же работу десятки раз.</li>
-        <li class="problem reveal"><span class="problem__n">06</span>Клиенты пишут вне рабочего времени.</li>
-        <li class="problem reveal"><span class="problem__n">07</span>Чтобы получить простой отчёт, приходится собирать данные вручную.</li>
-        <li class="problem reveal"><span class="problem__n">08</span>Есть сайт, но он практически не помогает бизнесу.</li>
-      </ul>
-      <p class="problems__footer reveal"><span class="accent">&gt;</span> Если процесс повторяется — его, возможно, можно автоматизировать.</p>
-    </div>
-  </section>
-
-  <!-- 3. BEFORE → AFTER -->
-  <section class="section" id="before-after" aria-labelledby="ba-title">
-    <div class="container">
-      <p class="mono-tag reveal">$ diff manual.flow auto.flow</p>
-      <h2 class="section__title reveal" id="ba-title">От ручной работы к системе.</h2>
-
-      <div class="ba-wrap">
-      <div class="ba reveal" id="ba">
-        <div class="ba__tabs" role="tablist" aria-label="Сравнение процессов">
-          <button class="ba__tab is-active" role="tab" id="ba-tab-before" aria-selected="true" aria-controls="ba-panel" data-mode="before">BEFORE <span>вручную</span></button>
-          <button class="ba__tab" role="tab" id="ba-tab-after" aria-selected="false" aria-controls="ba-panel" data-mode="after" tabindex="-1">AFTER <span>система</span></button>
-          <span class="ba__indicator" aria-hidden="true"></span>
-        </div>
-
-        <div class="ba__panel panel" id="ba-panel" role="tabpanel" aria-labelledby="ba-tab-before" data-mode="before">
-          <ol class="ba__steps" id="baSteps"></ol>
-          <div class="ba__legend" aria-hidden="true">
-            <span><i class="ba__chip ba__chip--manual"></i>делает человек</span>
-            <span><i class="ba__chip ba__chip--auto"></i>делает система</span>
-          </div>
-        </div>
+    <article class="case reveal" aria-labelledby="case-weekk">
+      <div class="case__body">
+        <p class="label">Case 02</p>
+        <h3 id="case-weekk">WEEKK — трекер дисциплины</h3>
+        <p class="case__lead">Трекер учёбы и привычек прямо в Telegram.</p>
+        <ul class="tags"><li>Telegram</li><li>Mini App</li><li>Firebase</li></ul>
+        <dl class="qa">
+          <div><dt>Проблема</dt><dd>Учёбу и привычки сложно держать под контролем, если для этого нужны отдельное приложение и заметки вручную.</dd></div>
+          <div><dt>Решение</dt><dd>Трекер в мессенджере, который и так открыт каждый день.</dd></div>
+          <div><dt>Что сделано</dt><dd>Разделы с целями и прогрессом, календарь активности, стрик, история отчётов, помодоро, напоминания в Telegram.</dd></div>
+          <div><dt>Результат</dt><dd>Дисциплина без лишних приложений: данные у каждого пользователя свои.</dd></div>
+        </dl>
+        <a class="link" href="https://t.me/weekktracker_bot" target="_blank" rel="noopener">Открыть в Telegram <span aria-hidden="true">→</span></a>
       </div>
-
-      <div class="ba__side reveal">
-        <p class="ba__claim">Меньше ручной работы. <span class="accent">Больше контроля.</span></p>
-        <p class="ba__note">// пример типового процесса обработки заявки — переключите BEFORE / AFTER</p>
+      <div class="case__vis">
+        <figure class="phone phone--wide"><img src="assets/weekk.webp" width="720" height="1110" loading="lazy" decoding="async" alt="WEEKK: разделы обучения и календарь активности"></figure>
       </div>
-      </div>
+    </article>
+
+    <a class="more reveal" href="https://tg-calc-gilt.vercel.app" target="_blank" rel="noopener"><span>Также: калькулятор процентной разницы — лёгкий Telegram Mini App</span><span class="more__go">демо <span aria-hidden="true">→</span></span></a>
+  </div>
+</section>
+
+<!-- 05 PROCESS -->
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <p class="label reveal"><b>05</b> / How it works</p>
+    <h2 class="section__title reveal" id="process-title">Пять шагов от задачи до запуска.</h2>
+    <ol class="process" id="timeline">
+      <li><span class="process__n">01</span><h3>DISCOVER</h3><p>Разбираем задачу.</p></li>
+      <li><span class="process__n">02</span><h3>MAP</h3><p>Проектируем процесс.</p></li>
+      <li><span class="process__n">03</span><h3>BUILD</h3><p>Создаём решение.</p></li>
+      <li><span class="process__n">04</span><h3>AUTOMATE</h3><p>Соединяем необходимые сервисы.</p></li>
+      <li><span class="process__n">05</span><h3>LAUNCH</h3><p>Запускаем.</p></li>
+    </ol>
+    <p class="quote reveal">Вам не нужно знать, какая технология нужна. Достаточно описать задачу своими словами.</p>
+  </div>
+</section>
+
+<!-- 06 APPROACH -->
+<section class="section" id="approach" aria-labelledby="approach-title">
+  <div class="container approach">
+    <div>
+      <p class="label reveal"><b>06</b> / Approach</p>
+      <h2 class="section__title reveal" id="approach-title">Не начинаем с&nbsp;технологии.</h2>
+      <p class="approach__text reveal">Сначала разбираемся, что мешает бизнесу.<br>Затем ищем самый простой способ это исправить.<br>И только после этого выбираем технологии.</p>
     </div>
-  </section>
+    <ul class="principles">
+      <li class="reveal"><span>01</span><div><h3>SIMPLE</h3><p>Не усложняем без необходимости.</p></div></li>
+      <li class="reveal" style="--d:.08s"><span>02</span><div><h3>USEFUL</h3><p>Каждая функция должна решать задачу.</p></div></li>
+      <li class="reveal" style="--d:.16s"><span>03</span><div><h3>REAL</h3><p>Создаём то, чем действительно будут пользоваться.</p></div></li>
+    </ul>
+  </div>
+</section>
 
-  <!-- 4. ЧТО МОЖНО АВТОМАТИЗИРОВАТЬ -->
-  <section class="section" id="solutions" aria-labelledby="solutions-title">
-    <div class="container">
-      <p class="mono-tag reveal">$ ls ./automate</p>
-      <h2 class="section__title reveal" id="solutions-title">Что можно автоматизировать?</h2>
-      <div class="cards">
-        <article class="card tilt reveal">
-          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12Z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></span>
-          <h3 class="card__label">AI ASSISTANTS</h3>
-          <p>Отвечают на вопросы клиентов, обрабатывают информацию и помогают сотрудникам работать быстрее.</p>
-        </article>
-        <article class="card tilt reveal">
-          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21.9 4.6 18.9 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9L18 7.2c.4-.4-.1-.6-.6-.2L7.5 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.5c.9-.3 1.6.2 1.3 1.1Z"/></svg></span>
-          <h3 class="card__label">TELEGRAM AUTOMATION</h3>
-          <p>Боты, уведомления, заявки, оплаты, Mini Apps и личные кабинеты.</p>
-        </article>
-        <article class="card tilt reveal">
-          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.3 11 16.7 6M7.3 13l9.4 5"/></svg></span>
-          <h3 class="card__label">BUSINESS PROCESSES</h3>
-          <p>Связываем CRM, таблицы, Telegram, email, AI и другие сервисы в один процесс.</p>
-        </article>
-        <article class="card tilt reveal">
-          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span>
-          <h3 class="card__label">WEB SYSTEMS</h3>
-          <p>Сайты, личные кабинеты, внутренние панели и web-сервисы.</p>
-        </article>
-        <article class="card tilt reveal">
-          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h6"/><path d="m16 15 3 3-3 3"/></svg></span>
-          <h3 class="card__label">DATA AUTOMATION</h3>
-          <p>Сбор, обработка и передача данных без постоянной ручной работы.</p>
-        </article>
-        <article class="card tilt reveal">
-          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg></span>
-          <h3 class="card__label">CUSTOM AI TOOLS</h3>
-          <p>Инструменты под конкретную задачу бизнеса, а не универсальный шаблон.</p>
-        </article>
-      </div>
+<!-- 07 FAQ -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <p class="label reveal"><b>07</b> / FAQ</p>
+    <h2 class="section__title reveal" id="faq-title">Частые вопросы.</h2>
+    <div class="faq">
+      <details class="reveal" open><summary>Я не разбираюсь в технологиях.</summary><p>Не нужно. Опишите задачу своими словами — техническую часть берём на себя.</p></details>
+      <details class="reveal"><summary>Мне нужен только небольшой инструмент.</summary><p>Можно начать с одного конкретного процесса и расширять систему позже.</p></details>
+      <details class="reveal"><summary>У меня уже есть сайт.</summary><p>Можно автоматизировать существующий процесс, не переделывая всё с нуля.</p></details>
+      <details class="reveal"><summary>Сколько это стоит?</summary><p>Стоимость зависит от задачи и объёма. После короткого обсуждения можно определить подходящий формат.</p></details>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 5. НЕ ЗНАЕТЕ, ЧТО НУЖНО? -->
-  <section class="section" id="help" aria-labelledby="help-title">
-    <div class="container">
-      <div class="help panel reveal">
-        <div class="help__copy">
-          <p class="mono-tag">$ help --not-sure</p>
-          <h2 class="help__title" id="help-title">Вам не нужно знать, какая технология вам&nbsp;нужна.</h2>
-          <p class="help__text">Расскажите, что сейчас занимает у вас много времени. Я помогу найти, что можно автоматизировать и какой инструмент лучше использовать.</p>
-          <a href="https://t.me/yamulla" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Разобрать мой процесс <span aria-hidden="true">→</span></a>
-        </div>
-
-        <form class="analyze terminal" id="analyzeForm" novalidate>
-          <label class="analyze__label" for="problemInput">
-            <span class="t-prompt">&gt;</span> describe_problem(<span class="t-str">"…"</span>)
-          </label>
-          <div class="analyze__field">
-            <span class="analyze__quote" aria-hidden="true">"</span>
-            <textarea id="problemInput" name="problem" rows="3" maxlength="600" placeholder="например: заявки из Instagram и сайта приходят в разные места, менеджер вручную переносит их в таблицу…"></textarea>
-            <span class="analyze__quote" aria-hidden="true">"</span>
-          </div>
-          <button class="btn btn--terminal" type="submit">ANALYZE PROCESS <span aria-hidden="true">→</span></button>
-          <p class="analyze__status" id="analyzeStatus" role="status" aria-live="polite">Текст скопируется, и откроется чат в Telegram — просто вставьте его.</p>
-        </form>
-      </div>
+<!-- 08 CONTACT -->
+<section class="section section--last" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="final reveal">
+      <p class="label"><b>08</b> / Contact</p>
+      <h2 id="contact-title">Есть процесс, который хочется автоматизировать?</h2>
+      <p class="final__sub">Расскажите, как он работает сейчас. Вместе найдём, что можно упростить.</p>
+      <a class="btn btn--primary" href="https://t.me/yamulla" target="_blank" rel="noopener">Обсудить задачу <span aria-hidden="true">→</span></a>
+      <p class="final__alt">Telegram <a href="https://t.me/yamulla" target="_blank" rel="noopener">@yamulla</a><!-- TODO: добавить Email, когда будет адрес --></p>
     </div>
-  </section>
-
-  <!-- 6. SOLUTIONS — уровни -->
-  <section class="section" id="levels" aria-labelledby="levels-title">
-    <div class="container">
-      <p class="mono-tag reveal">$ ./levels --show</p>
-      <h2 class="section__title reveal" id="levels-title">От простой автоматизации до полноценной системы.</h2>
-      <ol class="levels">
-        <li class="level reveal" data-level="1">
-          <span class="level__n">01</span>
-          <div class="level__body">
-            <h3>SIMPLE AUTOMATION</h3>
-            <p class="level__pipe"><span class="chip">Telegram</span><i>→</i><span class="chip">Google Sheets</span></p>
-          </div>
-          <span class="level__meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        </li>
-        <li class="level reveal" data-level="2">
-          <span class="level__n">02</span>
-          <div class="level__body">
-            <h3>SMART AUTOMATION</h3>
-            <p class="level__pipe"><span class="chip">Telegram</span><i>→</i><span class="chip chip--ai">AI</span><i>→</i><span class="chip">CRM</span></p>
-          </div>
-          <span class="level__meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        </li>
-        <li class="level reveal" data-level="3">
-          <span class="level__n">03</span>
-          <div class="level__body">
-            <h3>BUSINESS SYSTEM</h3>
-            <p class="level__pipe"><span class="chip">Website</span><i>→</i><span class="chip">CRM</span><i>→</i><span class="chip chip--ai">AI</span><i>→</i><span class="chip">Telegram</span><i>→</i><span class="chip">Analytics</span></p>
-          </div>
-          <span class="level__meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        </li>
-        <li class="level reveal" data-level="4">
-          <span class="level__n">04</span>
-          <div class="level__body">
-            <h3>CUSTOM PRODUCT</h3>
-            <p class="level__text">Полноценный web-продукт под конкретный бизнес.</p>
-          </div>
-          <span class="level__meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- 7. CASES -->
-  <section class="section" id="cases" aria-labelledby="cases-title">
-    <div class="container">
-      <p class="mono-tag reveal">$ ls ./cases</p>
-      <h2 class="section__title reveal" id="cases-title">Проекты: задача → решение → зачем.</h2>
-      <div class="cases">
-        <article class="case panel reveal">
-          <header class="case__head">
-            <span class="case__n">01</span>
-            <h3>WEEKK — трекер дисциплины</h3>
-            <p class="case__type">Telegram Mini App</p>
-          </header>
-          <dl class="case__grid">
-            <div class="case__row">
-              <dt>PROBLEM</dt>
-              <dd>Учёбу и привычки сложно держать под контролем, если для этого нужны отдельное приложение и заметки вручную.</dd>
-            </div>
-            <div class="case__row">
-              <dt>SOLUTION</dt>
-              <dd>Трекер прямо в Telegram: разделы с целями и прогрессом, календарь активности, стрик, история отчётов и помодоро. Данные в Firebase — у каждого пользователя свои, а напоминание приходит в Telegram автоматически.</dd>
-            </div>
-            <div class="case__row">
-              <dt>PURPOSE</dt>
-              <dd>Дисциплина без лишних приложений — в мессенджере, который и так открыт каждый день.</dd>
-            </div>
-          </dl>
-          <footer class="case__foot">
-            <ul class="tags" aria-label="Технологии">
-              <li class="tag">Telegram Mini Apps</li><li class="tag">Firebase</li><li class="tag">JavaScript</li>
-            </ul>
-            <a href="https://t.me/weekktracker_bot" target="_blank" rel="noopener" class="case__link">Открыть в Telegram <span aria-hidden="true">→</span></a>
-          </footer>
-        </article>
-
-        <article class="case panel reveal">
-          <header class="case__head">
-            <span class="case__n">02</span>
-            <h3>Калькулятор процентной разницы</h3>
-            <p class="case__type">Telegram Mini App</p>
-          </header>
-          <dl class="case__grid">
-            <div class="case__row">
-              <dt>PROBLEM</dt>
-              <dd>Чтобы быстро посчитать разницу в процентах, приходится открывать калькулятор и вспоминать формулу.</dd>
-            </div>
-            <div class="case__row">
-              <dt>SOLUTION</dt>
-              <dd>Лёгкий Mini App: считает процентную разницу между двумя числами, значения меняются местами свайпом, тема подстраивается под Telegram.</dd>
-            </div>
-            <div class="case__row">
-              <dt>PURPOSE</dt>
-              <dd>Одна частая задача — один инструмент, который открывается за секунду.</dd>
-            </div>
-          </dl>
-          <footer class="case__foot">
-            <ul class="tags" aria-label="Технологии">
-              <li class="tag">Telegram Mini Apps</li><li class="tag">JavaScript</li>
-            </ul>
-            <a href="https://tg-calc-gilt.vercel.app" target="_blank" rel="noopener" class="case__link">Открыть демо <span aria-hidden="true">→</span></a>
-          </footer>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. PROCESS -->
-  <section class="section" id="process" aria-labelledby="process-title">
-    <div class="container">
-      <p class="mono-tag reveal">$ cat process.md</p>
-      <h2 class="section__title reveal" id="process-title">Как это работает</h2>
-      <ol class="timeline" id="timeline">
-        <li class="timeline__step" style="--i:0"><span class="timeline__n">01</span><h3>DISCOVER</h3><p>Определяем проблему.</p></li>
-        <li class="timeline__step" style="--i:1"><span class="timeline__n">02</span><h3>MAP</h3><p>Разбираем текущий процесс.</p></li>
-        <li class="timeline__step" style="--i:2"><span class="timeline__n">03</span><h3>BUILD</h3><p>Создаём решение.</p></li>
-        <li class="timeline__step" style="--i:3"><span class="timeline__n">04</span><h3>AUTOMATE</h3><p>Связываем необходимые сервисы.</p></li>
-        <li class="timeline__step" style="--i:4"><span class="timeline__n">05</span><h3>LAUNCH</h3><p>Запускаем и проверяем систему.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- 9. FAQ -->
-  <section class="section" id="faq" aria-labelledby="faq-title">
-    <div class="container container--narrow">
-      <p class="mono-tag reveal">$ man yamulla</p>
-      <h2 class="section__title reveal" id="faq-title">Частые вопросы</h2>
-      <div class="faq">
-        <details class="faq__item reveal">
-          <summary>А если у меня уже есть сайт?</summary>
-          <div class="faq__a"><p>Это хорошо: обычно его не нужно переделывать. К нему можно подключить приём заявок, бота или AI-ассистента и связать с тем, что у вас уже работает.</p></div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>Можно ли автоматизировать только один процесс?</summary>
-          <div class="faq__a"><p>Да. С этого и лучше начинать — с одного повторяющегося процесса, который отнимает больше всего времени.</p></div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>Можно ли подключить AI к существующей CRM?</summary>
-          <div class="faq__a"><p>Зависит от CRM: у многих есть API или готовые интеграции. Я посмотрю, что доступно именно в вашей системе, и честно скажу, что получится.</p></div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>Можно ли сделать Telegram-бота для бизнеса?</summary>
-          <div class="faq__a"><p>Да: приём заявок, запись, ответы на частые вопросы, уведомления сотрудникам, оплаты, Mini Apps внутри Telegram.</p></div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>Что если я вообще не разбираюсь в технологиях?</summary>
-          <div class="faq__a"><p>Это нормально. Опишите задачу своими словами — техническую часть я возьму на себя и объясню решение простым языком.</p></div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>Сколько стоит автоматизация?</summary>
-          <div class="faq__a"><p>Фиксированного прайса нет — всё зависит от задачи. Сначала разбираем процесс, и я называю стоимость до начала работы.</p></div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>Сколько времени занимает разработка?</summary>
-          <div class="faq__a"><p>Зависит от объёма: простая автоматизация делается быстрее, чем полноценная система. Точный срок назову после разбора задачи.</p></div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. FINAL CTA -->
-  <section class="section section--cta" id="contact" aria-labelledby="cta-title">
-    <div class="container">
-      <div class="cta panel reveal">
-        <div class="cta__copy">
-          <p class="mono-tag">$ ./contact.sh --open</p>
-          <h2 class="cta__title" id="cta-title">Расскажите, что сейчас делается вручную.</h2>
-          <p class="cta__text">Я покажу, что можно автоматизировать, упростить или превратить в отдельный цифровой инструмент.</p>
-          <div class="cta__actions">
-            <a href="https://t.me/yamulla" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.9 4.6 18.9 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9L18 7.2c.4-.4-.1-.6-.6-.2L7.5 13.3l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3.5c.9-.3 1.6.2 1.3 1.1Z"/></svg>
-              Обсудить задачу <span aria-hidden="true">→</span>
-            </a>
-            <a href="https://instagram.com/yaamulla" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-              Instagram @yaamulla
-            </a>
-          </div>
-          <p class="cta__handle">Telegram: <a href="https://t.me/yamulla" target="_blank" rel="noopener">@yamulla</a></p>
-        </div>
-        <div class="terminal cta__terminal" aria-hidden="true">
-          <div class="terminal__line"><span class="t-prompt">&gt;</span> <span data-type="problem.detected"></span></div>
-          <div class="terminal__line"><span class="t-prompt">&gt;</span> <span data-type="solution.design()"></span></div>
-          <div class="terminal__line"><span class="t-prompt">&gt;</span> <span data-type="automation.ready()" class="t-ok"></span><span class="cursor">_</span></div>
-          <div class="terminal__line t-comment" data-type="// demo ui"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STACK -->
-  <section class="section section--stack" aria-labelledby="stack-title">
-    <div class="container">
-      <h2 class="stack__title" id="stack-title"><span class="accent">&gt;</span> stack --list</h2>
-      <ul class="tags tags--stack">
-        <li class="tag">HTML / CSS / JavaScript</li>
-        <li class="tag">Telegram Bot API</li>
-        <li class="tag">Telegram Mini Apps</li>
-        <li class="tag">LLM / AI API</li>
-        <li class="tag">Firebase</li>
-        <li class="tag">Vercel</li>
-        <li class="tag">Git</li>
-      </ul>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
 <footer class="footer">
-  <div class="container footer__inner">
-    <span>&gt;_ yamulla · AI • Automation • Web</span>
-    <span>© <span id="year">2026</span> · <a href="https://t.me/yamulla" target="_blank" rel="noopener">Telegram</a> · <a href="https://instagram.com/yaamulla" target="_blank" rel="noopener">Instagram</a></span>
+  <div class="container footer__in">
+    <div><p class="logo">YAMULLA</p><p class="footer__tag">Digital solutions for business</p><p class="footer__tag">© <span id="year">2026</span> YAMULLA</p></div>
+    <ul class="footer__list" aria-label="Направления"><li>Web</li><li>Telegram</li><li>Automation</li><li>AI</li></ul>
+    <ul class="footer__list" aria-label="Ссылки">
+      <li><a href="https://t.me/yamulla" target="_blank" rel="noopener">Telegram</a></li>
+      <li><a href="https://github.com/yamulla" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://instagram.com/yaamulla" target="_blank" rel="noopener">Instagram</a></li>
+      <!-- TODO: YouTube — добавить ссылку на канал -->
+    </ul>
   </div>
 </footer>
 
